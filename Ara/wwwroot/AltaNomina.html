@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    #csvOutput {
+        font-family: monospace;
+
+    }
+        textarea{
+            font-size: 8pt;
+        }
+    body{
+        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+        background-image: url('accountant.jpg');
+        font-size: 16pt;
+    }
+
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.7.7/xlsx.core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.core.min.js"></script>
+    <script type="text/javascript" src="excelStuff.js">
+    </script>
+</head>
+<body>
+    <label for="fileDate">Fecha para el archivo</label><br />
+    <input type="date" id="fileDate" required="required" /><br />
+    <label for="excelfile">Archivo de excel</label><br />
+    <input type="file" id="excelfile" /><br />
+    <input type="button" id="viewfile" value="Crear archivo" onclick="ExportToTable()" /><br />
+    <br />
+    <br />
+    <table id="exceltable"></table><br />
+    <textarea id="csvOutput" cols="150" rows="30"></textarea>
+</body>
+</html>
